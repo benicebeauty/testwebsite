@@ -1,1 +1,70 @@
 
+/* ==========================================================================
+   BE NICE CLINIC — CLEAN SYSTEM (PART 1/7)
+   ========================================================================== */
+:root {
+    --primary-color: #a3b4a4;
+    --bg-color: #eef2ee;
+    --accent-color: #4a5849;
+    --text-color: #1a221b;
+    --white: #ffffff;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
+body.architectural-canvas-body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+.canvas-glow-matrix {
+    position: fixed;
+    width: calc(100% + 4px) !important;
+    height: calc(100vh + 4px) !important;
+    top: -2px !important;
+    left: -2px !important;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.fluid-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.25;
+}
+
+.orb-alpha {
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: rgba(163, 180, 164, 0.4);
+}
+
+.orb-beta {
+    bottom: -10%;
+    left: -10%;
+    width: 700px;
+    height: 700px;
+    background: rgba(238, 242, 238, 0.6);
+}
