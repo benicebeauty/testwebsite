@@ -520,3 +520,76 @@ body.architectural-canvas-body {
     background-color: var(--text-color) !important;
     border-color: var(--text-color);
 }
+
+
+
+
+/* ==========================================================================
+   RESZPONZÍV JAVÍTÓ MOTOR — SMARTPHONE BREAKPOINTS (PART 7/6)
+   ========================================================================== */
+@media (max-width: 650px) {
+    html, body, .architectural-canvas-body { width: 100% !important; max-width: 100% !important; overflow-x: hidden !important; margin: 0 !important; padding: 0 !important; }
+    .hero-linear-section, .linear-grid-section, .premium-services-section-old, .museum-monograph-section, .infinite-reviews-marquee-section, .inkless-contact-section, .site-header, .utility-bar { width: 100% !important; max-width: 100% !important; overflow-x: hidden !important; }
+    .header-container, .container-fluid-luxury, .linear-hero-container, .linear-grid-section .container-fluid-luxury, .luxury-services-container-old, .monolith-services-container, .museum-monograph-container, .inkless-container, .footer-container { padding-left: 20px !important; padding-right: 20px !important; }
+    .luxury-services-container-old { flex-direction: column !important; text-align: center !important; gap: 40px !important; padding: 0 20px !important; }
+    .luxury-intro-column-old { width: 100% !important; position: static !important; text-align: center !important; }
+    .luxury-items-column-old { width: 100% !important; display: flex !important; flex-direction: column !important; }
+    .editorial-service-item-old { flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 15px !important; padding: 30px 0 !important; }
+    .bar-title, .editorial-main-title-old, .museum-monograph-container h2, .marquee-title-wrapper h2, .inkless-info-column-block h2, .inkless-form-box h3 { font-size: 1.75rem !important; line-height: 1.3 !important; letter-spacing: 0.5px !important; }
+    .bar-subtitle { font-size: 0.65rem !important; letter-spacing: 3px !important; margin-bottom: 10px !important; }
+    .marquee-text-block { font-family: var(--font-serif); font-size: 1.25rem !important; } .marquee-text-block strong { font-size: 0.85rem !important; }
+    .hero-linear-section { padding-top: 60px !important; padding-bottom: 100px !important; height: auto !important; min-height: auto !important; } 
+    .linear-hero-container .linear-hero-text { width: 100% !important; max-width: 100% !important; display: block !important; text-align: center !important; padding: 0 !important; margin: 0 auto 30px auto !important; }
+    .hero-linear-section .exhibition-desc { text-align: center !important; }
+    .linear-hero-graphic { overflow: visible !important; margin-top: 25px !important; }
+    .linear-master-frame { height: 300px !important; max-width: 100% !important; margin: 0 auto !important; position: relative !important; overflow: visible !important; }
+    .exhibition-tag { display: block; font-size: 0.6rem; font-weight: 500; letter-spacing: 5px; color: var(--text-color); margin-bottom: 25px; text-transform: uppercase; }
+    .exhibition-main-title { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 300; line-height: 1.15; color: var(--white); margin-bottom: 30px; }
+    .exhibition-main-title em { font-style: italic; font-weight: 300; color: var(--text-color); }
+    .exhibition-desc { font-size: 0.9rem; font-weight: 300; color: rgba(252, 251, 250, 0.95); line-height: 1.75; margin-bottom: 45px; }
+    .exhibition-btn-primary { display: inline-block; text-decoration: none; font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--white); background-color: var(--text-color); padding: 15px 25px; }
+    .exhibition-btn-primary:hover { background-color: var(--white); color: var(--text-color); }
+    .marquee-title-wrapper h2 { font-size: 1.45rem !important; }
+    .clean-4card-grid { grid-template-columns: 1fr !important; gap: 35px !important; width: 100% !important; }
+    .clean-luxury-card { border-bottom: 1px solid rgba(163, 180, 164, 0.2) !important; padding-bottom: 35px !important; }
+    .clean-luxury-card:last-child { border-bottom: none !important; padding-bottom: 0 !important; }
+    .slate-img-frame { height: 200px !important; margin-bottom: 18px !important; }
+    .clean-luxury-card h3 { font-size: 1.35rem !important; margin-bottom: 10px !important; }
+    .clean-luxury-card p { font-size: 0.85rem !important; line-height: 1.55 !important; margin-bottom: 20px !important; }
+    .slate-action-btn { width: 100% !important; padding: 12px 20px !important; font-size: 0.7rem !important; }
+    .architectural-footer { padding: 60px 0 30px 0 !important; display: block !important; text-align: center !important; }
+    .footer-luxury-container { max-width: 100% !important; padding-left: 20px !important; padding-right: 20px !important; margin: 0 auto !important; }
+    .footer-grid-monolith { display: block !important; width: 100% !important; padding-bottom: 45px !important; }
+    .footer-column, .footer-column.brand-column, .footer-column.links-column, .footer-column.hours-column, .footer-column.contact-column { display: block !important; text-align: center !important; align-items: center !important; width: 100% !important; margin: 0 0 45px 0 !important; padding: 0 !important; }
+    .footer-social-row { justify-content: center !important; }
+    .footer-links-list { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 12px !important; list-style: none !important; width: 100% !important; }
+    .footer-hours-list { width: 100% !important; max-width: 290px !important; margin: 0 auto !important; list-style: none !important; }
+    .footer-hours-list li { display: flex !important; justify-content: space-between !important; align-items: center !important; padding-bottom: 10px !important; border-bottom: none !important; }
+    .footer-phone-cta { align-self: center !important; display: inline-block !important; text-align: center !important; margin: 0 auto !important; }
+    .footer-copyright-strip { display: block !important; text-align: center !important; padding-top: 30px !important; width: 100% !important; align-items: center !important; }
+    .footer-copyright-strip p { margin-bottom: 15px !important; text-align: center !important; }
+    .footer-legal-links { justify-content: center !important; gap: 20px !important; }
+    .desktop-hero-ellipse-btn { display: none !important; visibility: hidden !important; opacity: 0 !important; }
+    .mobile-hero-floating-btn, .linear-master-frame .mobile-hero-floating-btn, .linear-hero-graphic .mobile-hero-floating-btn { display: flex !important; visibility: visible !important; position: absolute !important; bottom: 25px !important; left: 50% !important; margin-left: -60px !important; width: 120px !important; height: 58px !important; border-radius: 50% / 50% !important; background-color: var(--white) !important; color: var(--text-color) !important; font-family: var(--font-sans); font-size: 0.72rem !important; font-weight: 500 !important; text-transform: uppercase !important; letter-spacing: 1.5px !important; text-decoration: none !important; white-space: nowrap !important; padding: 0 20px !important; text-align: center !important; box-shadow: 0 10px 30px rgba(26, 34, 27, 0.15) !important; border: 1px solid rgba(163, 180, 164, 0.2) !important; z-index: 999 !important; justify-content: center !important; align-items: center !important; opacity: 1 !important; transform: scale(1) !important; transform-origin: center center !important; }
+    .mobile-hero-floating-btn *, .linear-master-frame .mobile-hero-floating-btn * { text-align: center !important; margin: 0 !important; padding: 0 !important; display: inline-block !important; }
+    .monograph-paper-block, .inkless-form-box { padding: 35px 20px !important; } .monograph-prose p, .editorial-lead-old, .inkless-row p { font-size: 0.88rem !important; line-height: 1.6 !important; }
+    .monograph-prose-quote { font-size: 1.35rem !important; margin: 25px 0 !important; padding-left: 15px !important; font-family: 'Cormorant Garamond', serif !important; }
+    .inkless-row p { padding-left: 0 !important; text-align: center; } .inkless-row-header { justify-content: center; }
+    .monumental-map-passepartout { height: 240px !important; padding: 4px !important; margin-top: 30px !important; }
+    .navigation-menu { transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.5s !important; transform: scale(0.96) translateY(-10px) !important; opacity: 0 !important; visibility: hidden !important; }
+    .navigation-menu.open { opacity: 1 !important; visibility: visible !important; transform: scale(1.0) translateY(0) !important; transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.5s !important; }
+    .collage-text-zone h2 { font-size: 2.0rem; } .main-collage-img { width: 100%; height: 280px; }
+    .collage-image-zone::before { width: 100%; height: 280px; left: 0; top: -8px; }
+    .journal-page-wrapper .journal-banner-title { font-size: 2.0rem; } .journal-page-wrapper .triple-card-content { padding: 25px; }
+    .journal-page-wrapper .journal-isolated-3grid { grid-template-columns: 1fr !important; gap: 30px !important; padding: 0 20px !important; }
+    .journal-page-wrapper .journal-banner { height: 180px !important; } .journal-page-wrapper .journal-banner-title { font-size: 2.2rem !important; }
+    .reviews-masonry-grid { grid-template-columns: 1fr !important; gap: 30px !important; } .monumental-map-passepartout.map-narrow { height: 260px !important; }
+    .sanctuary-hours-list li { flex-direction: row; align-items: center; gap: 2px; margin-bottom: 8px; justify-content: space-evenly; }
+
+@media (max-width: 650px) {
+    .collage-text-zone .collage-btn,
+    .collage-btn {
+        align-self: center !important; /* Mobilon középre igazodik */
+        margin-top: 25px !important;
+    }
+}
