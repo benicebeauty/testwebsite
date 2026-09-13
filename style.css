@@ -1,1 +1,522 @@
+/* ==========================================================================
+   BE NICE CLINIC — CLEAN SYSTEM (PART 1/7)
+   ========================================================================== */
+:root {
+    --primary-color: #a3b4a4;
+    --bg-color: #eef2ee;
+    --accent-color: #4a5849;
+    --text-color: #1a221b;
+    --white: #ffffff;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
+body.architectural-canvas-body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+.canvas-glow-matrix {
+    position: fixed;
+    width: calc(100% + 4px) !important;
+    height: calc(100vh + 4px) !important;
+    top: -2px !important;
+    left: -2px !important;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.fluid-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.25;
+}
+
+.orb-alpha {
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: rgba(163, 180, 164, 0.4);
+}
+
+.orb-beta {
+    bottom: -10%;
+    left: -10%;
+    width: 700px;
+    height: 700px;
+    background: rgba(238, 242, 238, 0.6);
+}
+/* ==========================================================================
+   BE NICE CLINIC — DESKTOP HERO & ELLIPSE BUTTON MOTOR (PART 2/7)
+   ========================================================================== */
+@media (min-width: 1101px) {
+    .hero-linear-section .linear-hero-container {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 30px 40px !important;
+    }
+
+    .desktop-hero-ellipse-btn {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        visibility: visible !important;
+        position: relative !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        margin: 40px auto 0 auto !important;
+        width: 160px !important;
+        height: 62px !important;
+        border-radius: 50% / 50% !important;
+        background-color: #ffffff !important;
+        color: #1a221b !important;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.74rem !important;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        text-decoration: none !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        line-height: normal !important;
+        padding: 0 20px !important;
+        box-shadow: 0 15px 35px rgba(26, 34, 27, 0.08) !important;
+        border: 1px solid rgba(163, 180, 164, 0.2) !important;
+        z-index: 100 !important;
+        opacity: 0;
+        transform: scale(0.1) !important;
+        transition: opacity 1.8s cubic-bezier(0.25, 1, 0.5, 1), transform 1.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+
+    .desktop-hero-ellipse-btn.visible {
+        opacity: 1 !important;
+        transform: scale(1.0) !important;
+        transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+
+    .desktop-hero-ellipse-btn:hover {
+        background-color: #1a221b !important;
+        color: #ffffff !important;
+        box-shadow: 0 10px 25px rgba(26, 34, 27, 0.1) !important;
+        transform: scale(0.9) !important;
+        transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease !important;
+    }
+
+    .mobile-hero-floating-btn {
+        display: none !important;
+    }
+
+    .hero-linear-section .linear-hero-container .linear-hero-graphic {
+        width: 48% !important;
+        max-width: 48% !important;
+        height: 65vh !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: 0 !important;
+        overflow: visible !important;
+    }
+
+    .hero-linear-section .linear-hero-container .linear-master-frame {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 65vh !important;
+        min-height: 65vh !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    .hero-linear-section .linear-hero-container .linear-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+}
+/* ==========================================================================
+   BE NICE CLINIC — GLOBÁLIS FEJLÉC ÉS UTILITY BAR (PART 3/7)
+   ========================================================================== */
+.utility-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid rgba(26, 34, 27, 0.05);
+    z-index: 1002;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+}
+
+.utility-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.utility-left {
+    display: flex;
+    align-items: center;
+}
+
+.utility-location {
+    margin-right: 40px;
+    position: relative;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.utility-location::after {
+    content: '•';
+    position: absolute;
+    right: -23px;
+    color: var(--primary-color);
+    opacity: 0.6;
+}
+
+.utility-phone {
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.utility-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.utility-social-icon {
+    width: 15px;
+    height: 15px;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.utility-social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.utility-social-icon:hover {
+    color: var(--primary-color);
+}
+
+.site-header {
+    position: fixed;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(238, 242, 238, 0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(163, 180, 164, 0.15);
+    z-index: 1001;
+    margin-top: -1px !important;
+}
+
+.site-header.header-scrolled {
+    top: 0px !important;
+    background-color: rgba(238, 242, 238, 0.95) !important;
+    box-shadow: 0 10px 30px rgba(26, 34, 27, 0.04) !important;
+}
+
+.header-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.logo-main {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: var(--text-color);
+    display: inline-block;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--text-color);
+    padding: 10px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+
+.book-btn-cta {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--white);
+    background-color: var(--text-color);
+    padding: 12px 26px;
+}
+
+.book-btn-cta:hover {
+    background-color: var(--primary-color);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* ==========================================================================
+   BE NICE CLINIC — HERO & ASZTALI 4-CARD RÁCS (PART 4/7)
+   ========================================================================== */
+.hero-linear-section {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color) !important;
+    display: flex !important;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 35px;
+}
+
+.linear-hero-container {
+    max-width: 1240px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 40px !important;
+    position: relative;
+    z-index: 5;
+    padding-bottom: 0 !important;
+}
+
+.linear-hero-text {
+    width: 46% !important;
+    z-index: 10;
+}
+
+.exhibition-tag {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.exhibition-main-title {
+    font-family: var(--font-serif);
+    font-size: 4.6rem;
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.exhibition-main-title em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.exhibition-desc {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(252, 251, 250, 0.95);
+    line-height: 1.75;
+    margin-bottom: 45px;
+}
+
+.exhibition-btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--white);
+    background-color: var(--text-color);
+    padding: 18px 40px;
+}
+
+.exhibition-btn-primary:hover {
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+/* --- MAIN TREATMENTS SECTION --- */
+.linear-grid-section {
+    padding: 160px 0;
+    background-color: var(--bg-color) !important;
+    width: 100%;
+}
+
+.linear-grid-section .container-fluid-luxury {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+    width: 100% !important;
+}
+
+.editorial-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.bar-subtitle {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.bar-title {
+    font-family: var(--font-serif);
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.bar-accent-line {
+    width: 35px;
+    height: 1px;
+    background-color: var(--primary-color);
+    margin: 25px auto 0;
+}
+
+.clean-4card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    width: 100%;
+}
+
+.clean-luxury-card {
+    background-color: transparent;
+    border-left: 2px solid var(--primary-color);
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.clean-4card-grid .clean-luxury-card:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.slate-img-frame {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid rgba(163, 180, 164, 0.4);
+}
+
+.slate-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clean-luxury-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.clean-luxury-card p {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: #384239;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.slate-action-btn {
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    align-self: flex-start;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: var(--primary-color) !important;
+    color: var(--white) !important;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 8px 20px rgba(163, 180, 164, 0.15);
+}
+
+.clean-luxury-card:hover .slate-action-btn {
+    background-color: var(--text-color) !important;
+    border-color: var(--text-color);
+}
