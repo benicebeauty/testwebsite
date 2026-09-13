@@ -68,3 +68,167 @@ body.architectural-canvas-body {
     height: 700px;
     background: rgba(238, 242, 238, 0.6);
 }
+/* ==========================================================================
+   BE NICE CLINIC — GLOBÁLIS FEJLÉC ÉS UTILITY BAR (PART 3/7)
+   ========================================================================== */
+.utility-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid rgba(26, 34, 27, 0.05);
+    z-index: 1002;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+}
+
+.utility-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.utility-left {
+    display: flex;
+    align-items: center;
+}
+
+.utility-location {
+    margin-right: 40px;
+    position: relative;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.utility-location::after {
+    content: '•';
+    position: absolute;
+    right: -23px;
+    color: var(--primary-color);
+    opacity: 0.6;
+}
+
+.utility-phone {
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.utility-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.utility-social-icon {
+    width: 15px;
+    height: 15px;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.utility-social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.utility-social-icon:hover {
+    color: var(--primary-color);
+}
+
+.site-header {
+    position: fixed;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(238, 242, 238, 0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(163, 180, 164, 0.15);
+    z-index: 1001;
+    margin-top: -1px !important;
+}
+
+.site-header.header-scrolled {
+    top: 0px !important;
+    background-color: rgba(238, 242, 238, 0.95) !important;
+    box-shadow: 0 10px 30px rgba(26, 34, 27, 0.04) !important;
+}
+
+.header-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.logo-main {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: var(--text-color);
+    display: inline-block;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--text-color);
+    padding: 10px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.book-btn-cta {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--white);
+    background-color: var(--text-color);
+    padding: 12px 26px;
+}
+
+.book-btn-cta:hover {
+    background-color: var(--primary-color);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
