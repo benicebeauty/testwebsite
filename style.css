@@ -2556,3 +2556,43 @@ body.architectural-canvas-body {
         min-height: auto !important;
     }
 }
+
+
+/* ==========================================================================
+   EXCLUSIVE HARDWARE APPLE GRAPHICS ENGINE — SAFARI PRO MAX SPEED
+   ========================================================================== */
+@media (max-width: 1100px) {
+    /* 
+       A KRITIKUS JAVÍTÁS: Nyers erővel lekapcsoljuk a nehéz élő elmosást mobilon!
+       Helyette tiszta, fix háttérszínt adunk a headernek, így az iPhone 
+       azonnal, 0ms alatt képes betölteni és görgetni az oldalt.
+    */
+    .site-header,
+    .site-header.header-scrolled {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background-color: #ffffff !important; /* Hófehér steril mobil háttér */
+    }
+
+    .canvas-glow-matrix,
+    .fluid-orb {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    /* Aktiváljuk az Apple belső grafikus chipjét (GPU) a vajpuha futásért */
+    .site-header,
+    .navigation-menu,
+    .clean-luxury-card,
+    .sanctuary-card-london,
+    .inkless-form-box {
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        -webkit-perspective: 1000px !important;
+        perspective: 1000px !important;
+    }
+}
+
