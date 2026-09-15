@@ -1503,7 +1503,7 @@ body.architectural-canvas-body {
 
 /* Árlista fejléc banner */
 .price-banner { 
-    height: 200px; 
+    height: 180px; 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
