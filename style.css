@@ -1495,8 +1495,7 @@ body.architectural-canvas-body {
 /* Oldalcsomagoló és elrendezési váz az aloldalon */
 .price-page-wrapper { 
     width: 100%; 
-    display: block; 
-    margin-top: 100px; 
+    display: block;  
     padding-bottom: 100px; 
     box-sizing: border-box; 
 }
