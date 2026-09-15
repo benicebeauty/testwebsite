@@ -2688,7 +2688,7 @@ body.architectural-canvas-body {
     .journal-isolated-3grid .journal-triple-card:nth-child(3n+1),
     .journal-isolated-3grid .journal-triple-card:nth-child(3n+2),
     .journal-isolated-3grid .journal-triple-card:nth-child(3n) {
-        transform: translateY(20px) !important;
+        transform: translateY(10px) !important;
         animation-name: luxuryJournalCenterLift !important;
         animation-duration: 1.2s;
     }
