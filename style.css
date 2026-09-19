@@ -1801,6 +1801,12 @@ body.architectural-canvas-body {
         padding: 25px 0 !important;
     }
 
+
+      .price-banner-title{
+   font-size: 2.2rem; 
+    }
+   
+
     .interactive-section-header h2 {
         font-size: 1.3rem !important;
         line-height: 1.3 !important;
