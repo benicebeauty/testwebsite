@@ -2983,7 +2983,9 @@ body.architectural-canvas-body {
 .price-banner{
         margin-top: 0;
     }
-   
+   .journal-page-wrapper .journal-banner {
+        margin-top: 0;
+}
 }
 
 /* ==========================================================================
