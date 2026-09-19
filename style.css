@@ -1517,6 +1517,9 @@ body.architectural-canvas-body {
 .price-banner-title{
    font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; color: var(--white) !important; line-height: 1.2; letter-spacing: 0.5px;
 }
+
+.price-page-wrapper .price-banner-title em { font-style: italic; color: var(--text-color) !important; }
+
 .price-banner-subtitle{
     display: block; font-size: 0.72rem; font-weight: 500; letter-spacing: 5px; color: var(--accent-color) !important; text-transform: uppercase; margin-bottom: 16px;
 }
