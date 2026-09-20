@@ -1247,6 +1247,11 @@ body.architectural-canvas-body {
     
     .linear-master-frame { height: 590px !important; max-width: 100% !important; margin: 0 auto !important; position: relative !important; overflow: visible !important; } 
     .linear-master-frame .linear-img { object-fit: cover !important; width: 100% !important; height: 100% !important; }
+
+   .reviews-masonry-grid { 
+    display: grid !important; 
+    grid-template-columns: repeat(2, 1fr) !important; 
+    }
 }
 /* ==========================================================================
    RESZPONZÍV JAVÍTÓ MOTOR — TABLET FOOTER & COMPRESSION (PART 7/5)
